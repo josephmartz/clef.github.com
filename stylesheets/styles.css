@@ -2,8 +2,8 @@
 
 body {
   padding:50px;
-  font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color:#777;
+  font:15px/1.6 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color:#333;
   font-weight:300;
 }
 
@@ -96,7 +96,7 @@ img {
 }
 
 header {
-  width:270px;
+  width:200px;
   float:left;
   position:fixed;
 }
@@ -160,7 +160,7 @@ header ul a strong {
 }
 
 section {
-  width:500px;
+  width:600px;
   float:right;
   padding-bottom:50px;
 }
@@ -252,4 +252,8 @@ footer {
     font-size:12pt;
     color:#444;
   }
+}
+
+code span.exp span {
+  color: rgb(136, 0, 0)!important;
 }
