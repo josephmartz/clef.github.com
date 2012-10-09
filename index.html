@@ -92,21 +92,22 @@ clef.initFrame({
           </br>
           <h3>OAuth</h3>
           <p>Clef follows the OAuth 2.0 protocol to authenticate users. Luckily, much of this protocol is abstracted away because of the unique phone to computer interaction Clef provides; therefore, all you need to do is implement the redirect URI and code for token exchange.</p>
-          <h4>GET /authorize</h4>
+          <h4>POST /authorize</h4>
           <p>This is the API route to exchange an OAuth code for an access token.</p>
           <pre>
             <code class='prettyprint'>
 <span class='exp'>REQUEST DEFINITION:</span>
 
-GET http://clef.io/api/authorize?
-  access_token={YOUR_USER_ACCESS_TOKEN}
-  &amp;app_id={YOUR_APP_ID}
-  &amp;app_secret={YOUR_APP_SECRET}
+POST http://clef.io/api/authorize
+
+Parameters:
+access_token={YOUR_USER_ACCESS_TOKEN}
+&amp;app_id={YOUR_APP_ID}
+&amp;app_secret={YOUR_APP_SECRET}
 
 <span class='exp'>EXAMPLE REQUEST:</span>
 
-curl https://clef.io/api/authorize?access_token=4asd3fjdkf3sdqet03jd&app_id=1234&app_secret=56789
-
+curl --data "access_token=4asd3fjdkf3sdqet03jd&app_id=1234&app_secret=56789" https://clef.io/api/authorize
 <span class='exp'>EXAMPLE SUCCESS RESPONSE:</span>
 
 {
@@ -143,19 +144,21 @@ curl https://clef.io/api/authorize?access_token=4asd3fjdkf3sdqet03jd&app_id=1234
           </br>
           <h3>User Information</h3>
           <p>Right now, there is only one API route to get access about the user. In the future, Clef will support API calls to other services that the user can connect like Twitter, Instagram, or Stripe.</p>
-          <h4>GET /info</h4>
+          <h4>POST /info</h4>
           <p>This API request returns all available information for the user.</p>
           
                   <pre>
                     <code class='prettyprint'>
 <span class='exp'>REQUEST DEFINITION:</span>
 
-GET http://clef.io/api/info?access_token={YOUR_USER_ACCESS_TOKEN}
+POST http://clef.io/api/info
+
+Parameters:
+access_token={YOUR_USER_ACCESS_TOKEN}
 
 <span class='exp'>EXAMPLE REQUEST:</span>
 
-curl https://clef.io/api/info?access_token=4asd3fjdkf3sdqet03jd
-
+curl --data "access_token=4asd3fjdkf3sdqet03jd" https://clef.io/api/info
 <span class='exp'>EXAMPLE SUCCESS RESPONSE:</span>
 
 {
