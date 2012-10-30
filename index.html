@@ -58,38 +58,21 @@
           </br>
           <h3>Javascript</h3>
           <p>The front end Clef javascript API is essential to Clef integration in your application. It <i>must</i> be included on any page where you want users to be able to log in with Clef.</p>
-          <h4>Initialization</h4>
-          <p>You must initialize the API on every page that involves Clef authentication</p>
+          <h4>QR code initialization</h4>
+          <p>You must initialize the API on every page that involves Clef authentication. Initialization is as simple as including a script tag with the correct attributes on your web page where you want the Clef QR code to appear.</p>
+
           <pre>
             <code class='prettyprint'>
-var clef = Clef('APPLICATION_ID');
+&lt;body&gt;
+  //all of your other things
+  &lt;script src='https://clef.io/v1/clef.js' class='clef-code' 
+    data-app-id='YOUR_APP_ID' data-redirect-url-'YOUR_REDIRECT_URL' 
+    data-size='DESIRED_QR_CODE_SIZE'&gt;&lt;/script&gt;
+  //more things
+&lt;/body&gt;
             </code>
           </pre>
-          <h4>initFrame(options)</h4>
-          <p>To generate the Clef QR code that allows users to authenticate, you must call the initFrame method</p>
-          <pre>
-            <code class='prettyprint'>
-clef.initFrame({
-  
-  // Your preferred width and height of the Clef iFrame.
-  // Must be greater than 150 and an INTEGER
-
-  dim: 200, 
-  
-  // A valid CSS ID (leave out the #) of the div on your page that
-  // you want the Clef QR code to appear in
-
-  inside: 'qr', 
-  
-  // The url that you want users to be redirected to on authentication.
-  // On this page, you will exchange the OAuth code for a token
-  // and request user information from the Clef API
-
-  redirect_url: 'http://example.com/redirect' 
-})
-            </code>
-          </pre>
-          </br>
+          <br/>
           <h3>OAuth</h3>
           <p>Clef follows the OAuth 2.0 protocol to authenticate users. Luckily, much of this protocol is abstracted away because of the unique phone to computer interaction Clef provides; therefore, all you need to do is implement the redirect URI and code for token exchange.</p>
           <h4>POST /authorize</h4>
