@@ -32,8 +32,8 @@
         <h1>Welcome to Clef</h1>
         </br>
         <p>Clef is a new way to manage identity on the web. Rather than remember hundreds of usernames and passwords, Clef makes authentication easy and secure. First, website owners integrate the Clef javascript API with their website. Next, users download the Clef mobile application on their phone and set up an account using only their email. Now, users can scan any login QR code on a Clef enabled site and they will instantly authenticate the entire computer. Finally, when users are ready, they can logout on their phone and the computer will be deactivated—allowing no new logins to Clef enabled sites.</p>
-        
-        <p>If you're here, you are almost certainly a website owner looking to integrate Clef with your website. Below, you can find <a href='#sample'>sample applications built using Clef in Ruby, Python, and Javascript</a> and <a href='#documentation'>in-depth documentation on the API.</a></p> 
+
+        <p>If you're here, you are almost certainly a website owner looking to integrate Clef with your website. Below, you can find <a href='#sample'>sample applications built using Clef in Ruby, Python, and Javascript</a> and <a href='#documentation'>in-depth documentation on the API.</a></p>
 
         <p>If you're looking for a more indepth tutorial, visit our <a href="https://developer.clef.io/information">5 minute setup page</a>.</p>
         <div id='sample'>
@@ -51,7 +51,7 @@
         </br>
         </br>
         </br>
-        
+
         <div id='documentation'>
           <h2>Clef API Documentation</h2>
           </br>
@@ -65,8 +65,8 @@
             <code class='prettyprint'>
 &lt;body&gt;
   //all of your other things
-  &lt;script src='https://clef.io/v1/clef.js' class='clef-code' 
-    data-app-id='YOUR_APP_ID' data-redirect-url-'YOUR_REDIRECT_URL' 
+  &lt;script src='https://clef.io/v1/clef.js' class='clef-code'
+    data-app-id='YOUR_APP_ID' data-redirect-url-'YOUR_REDIRECT_URL'
     data-size='DESIRED_QR_CODE_SIZE'&gt;&lt;/script&gt;
   //more things
 &lt;/body&gt;
@@ -84,7 +84,7 @@
 POST https://clef.io/api/authorize
 
 Parameters:
-access_token={YOUR_USER_ACCESS_TOKEN}
+code={YOUR_USER_ACCESS_TOKEN}
 &amp;app_id={YOUR_APP_ID}
 &amp;app_secret={YOUR_APP_SECRET}
 
@@ -129,7 +129,7 @@ curl --data "access_token=4asd3fjdkf3sdqet03jd&app_id=1234&app_secret=56789" htt
           <p>Right now, there is only one API route to get access about the user. In the future, Clef will support API calls to other services that the user can connect like Twitter, Instagram, or Stripe.</p>
           <h4>POST /info</h4>
           <p>This API request returns all available information for the user.</p>
-          
+
                   <pre>
                     <code class='prettyprint'>
 <span class='exp'>REQUEST DEFINITION:</span>
@@ -164,14 +164,14 @@ curl --data "access_token=4asd3fjdkf3sdqet03jd" https://clef.io/api/info
 }
                     </code>
                   </pre>
-        </div>           
+        </div>
       </section>
-      
+
       <footer>
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
-    
+
   </body>
 </html>
