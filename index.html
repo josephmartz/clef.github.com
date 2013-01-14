@@ -58,20 +58,38 @@
           </br>
           </br>
           <h3>Javascript</h3>
-          <p>The front end Clef javascript API is essential to Clef integration in your application. It <i>must</i> be included on any page where you want users to be able to log in with Clef.</p>
-          <h4>QR code initialization</h4>
-          <p>You must initialize the API on every page that involves Clef authentication. Initialization is as simple as including a script tag with the correct attributes on your web page where you want the Clef QR code to appear.</p>
+          <h4>Clef Button</h4>
+           <p>Getting the Clef button on your site is as easy as inserting one script tag. All you have to do is pick where you want the Clef button and insert the script tag there with the proper attributes. There are a variety of different button styles to choose from:</p>
 
-          <pre>
-            <code class='prettyprint'>
-&lt;body&gt;
-  //all of your other things
-  &lt;script src='https://clef.io/v1/clef.js' class='clef-code'
-    data-app-id='YOUR_APP_ID' data-redirect-url-'YOUR_REDIRECT_URL'
-    data-size='DESIRED_QR_CODE_SIZE'&gt;&lt;/script&gt;
-  //more things
-&lt;/body&gt;
-            </code>
+            <table class="twelve">
+              <tbody>
+                <tr>
+                  <td><iframe src='http://clef.local:5000/iframes/button' style='height:34px;width:235px;margin:0;padding:0;' frameBorder=0></iframe></td>
+                  <td><textarea>&lt;script src='https://clef.io/v2/clef.js' class='clef-code' data-app-id='YOUR_APP_ID' data-redirect-url='YOUR_REDIRECT_URL'&gt;&lt;/script&gt;'</textarea>
+                  </td>
+                </tr>
+                <tr>
+                  <td><iframe src='http://clef.local:5000/iframes/button?t=button' style='height:34px;width:235px;margin:0;padding:0;' frameBorder=0></iframe></td>
+                  <td>
+                    <textarea>&lt;script src='https://clef.io/v2/clef.js' class='clef-code' data-app-id='YOUR_APP_ID' data-redirect-url='YOUR_REDIRECT_URL' data-type='button&gt;&lt;/script&gt;'</textarea>
+                  </td>
+                </tr>
+                <tr>
+                  <td><iframe src='http://clef.local:5000/iframes/button?c=white' style='height:34px;width:235px;margin:0;padding:0;' frameBorder=0></iframe></td>
+                  <td>
+                    <textarea>&lt;script src='https://clef.io/v2/clef.js' class='clef-code' data-app-id='YOUR_APP_ID' data-redirect-url='YOUR_REDIRECT_URL' data-color='white'&gt;&lt;/script&gt;'</textarea>
+                  </td>
+                </tr>
+                <tr>
+                  <td><iframe src='http://clef.local:5000/iframes/button?c=white&t=button' style='height:34px;width:235px;margin:0;padding:0;' frameBorder=0></iframe></td>
+                  <td>
+                    <textarea>&lt;script src='https://clef.io/v2/clef.js' class='clef-code' data-app-id='YOUR_APP_ID' data-redirect-url='YOUR_REDIRECT_URL' data-color='white' data-type='button'&gt;&lt;/script&gt;'</textarea>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <p>All the buttons provide the same log in and registration capabilities across all modern browsers.</p>
+
           </pre>
           <br/>
           <h3>OAuth</h3>
